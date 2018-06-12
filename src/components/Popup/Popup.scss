@@ -1,0 +1,222 @@
+@import 'assets/css/mixin.scss';
+
+body.modal-open{
+    header{
+        padding-right: 17px;
+    }
+}
+
+.modal-dialog.login-poopup{
+    .modal-content{
+        background: url("../../assets/images/login-bg.png") no-repeat center center;
+        width: 100%;
+        background-size: cover;
+        border: 1px solid #ffffff;
+        .modal-header{
+            border-bottom: 0 solid #e9ecef;
+            padding: 45px 10px;
+            .close {
+                padding: 5px;
+                margin: 0;
+                position: absolute;
+                font-size: 33px;
+                color: #ffffff;
+                opacity: 1;
+                right: 10px;
+                top: 5px;
+            }
+            .modal-title{
+                display: block;
+                text-align: center;
+                margin: auto;
+                width: 100%;
+                h2{
+                    font-size: 40px;
+                    color: #ffffff;
+                    font-family: 'open_sansbold';
+                }
+                span{
+                    color: #bab9b9;
+                    font-size: 20px;
+                }
+            }
+        }
+        .modal-body{
+            .custom-checkbox {
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin: 0 0 15px 0;
+                cursor: pointer;
+                font-size: 14px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: #ffffff;
+                a{
+                    color: #e35b01;
+                }
+                @include respond-to(media-lg) {
+                    margin-top: 10px;
+                }
+                @include respond-to(media-xm) {
+                    margin: 10px 0 25px;
+                }
+                /* Hide the browser's default checkbox */
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    &:checked ~ .checkmark {
+                        background-color: #dc3545;
+                    }
+                    &:checked ~ .checkmark {
+                        background-color: #dc3545;
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+                /* Create a custom checkbox */
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    background-color: #ffffff;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                    &:after {
+                        left: 9px;
+                        top: 5px;
+                        width: 5px;
+                        height: 10px;
+                        border: solid white;
+                        border-width: 0 3px 3px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+            .forgot-pass-link {
+                color: #ffffff !important;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            .dont-have-account{
+                color: #ffffff;
+                font-size: 17px;
+                display: block;
+                width: 100%;
+                a{
+                    color: #e35b01;
+                    cursor: pointer;
+                }
+            }
+            .signup-process{
+                width: 100%;
+                position: relative;
+                margin-bottom: 25px;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    background-color: #ffffff;
+                    height: 2px;
+                    width: 60%;
+                    margin: auto;
+                    top: 32%;
+                    left: 0;
+                    right: 0;
+                }
+                li{
+                    display: inline-block;
+                    width: 33%;
+                    position: relative;
+                    z-index: 2;
+                    a{
+                        display: block;
+                        cursor: pointer;
+                        .signup-process-box{
+                            height: 65px;
+                            width: 65px;
+                            background-color: #eb3343;
+                            border-radius: 100%;
+                            text-align: center;
+                            padding: 18px 10px;
+                            margin: 0 auto 10px;
+                            border: 2px solid #ffffff;
+                            position: relative;
+                            .approved-icon{
+                                position: absolute;
+                                right: -5px;
+                                top: -5px;
+                            }
+                        }
+                        span{
+                            color: #ffffff;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .custom-radio-button{
+                margin: 20px 0;
+                .radio-container {
+                    display: block;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 12px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    color: #ffffff;
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        &:checked ~ .checkmark {
+                            background-color: #eb3343;
+                        }
+                        &:checked ~ .checkmark:after {
+                            display: block;
+                        }
+                    }
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 20px;
+                        width: 20px;
+                        background-color: #eee;
+                        border-radius: 50%;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                        }
+                        &:after {
+                           top: 6px;
+                           left: 6px;
+                           width: 8px;
+                           height: 8px;
+                           border-radius: 50%;
+                           background: white;
+                       }
+                    }
+                    &:hover input ~ .checkmark {
+                        background-color: #ccc;
+                    }
+                }     
+            }
+        }
+    }
+}
